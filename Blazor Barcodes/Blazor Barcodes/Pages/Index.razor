@@ -1,0 +1,9 @@
+﻿@page "/"
+@using ViewModels;
+
+@inject BarCodeViewModel Vm
+
+<input type="text" @bind="Vm.InputText" PlaceHolder="Paste Json Data here"/>
+        <MatButton OnClick="Vm.CreateQRCode" Label="Generate Code"></MatButton>
+
+<img src="@Vm.QRCodeStr" style="width:500px;height:500px;"/>
