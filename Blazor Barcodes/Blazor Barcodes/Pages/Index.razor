@@ -3,7 +3,13 @@
 
 @inject BarCodeViewModel Vm
 
+<h5>@Title</h5>
 <input type="text" @bind="Vm.InputText" PlaceHolder="Paste Json Data here"/>
         <MatButton OnClick="Vm.CreateQRCode" Label="Generate Code"></MatButton>
 
 <img src="@Vm.QRCodeStr" style="width:500px;height:500px;"/>
+
+@functions
+{
+    string Title = "Hello from BLAZOR";
+}
